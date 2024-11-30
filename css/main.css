@@ -1,0 +1,521 @@
+*, 
+*::before, 
+*::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "NHaasGroteskDSP-light"; 
+    color: #000;
+    cursor: url('../Images/cursor.png'), auto;
+}
+
+h1
+{
+    font-family: "NHaasGroteskDSP-medium"; 
+    font-size: 5rem;
+    color: #000;
+}
+
+h2
+{
+    font-family: "NHaasGroteskDSP-elight"; 
+    padding-top: 3%;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+p
+{
+    font-family: "NHaasGroteskDSP-light"; 
+    color: #000;
+    font-size: 1rem;
+}
+
+.bio
+{
+    font-size: 1.2rem;
+}
+
+.profilePic
+{
+    width: 40%;
+    height: 40%;
+}
+
+/* Nav Bar */
+/* --------------------------------- */
+/*
+header
+{
+    width:100%;
+    position: fixed;
+}
+
+header nav
+{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+header ul
+{
+    display: flex;
+    list-style: none;
+    left: 0;
+    margin: 0px;
+    color: #000;
+}
+
+li 
+{
+    text-decoration: none;
+    color: black;
+    align-items: flex-end;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+  }
+  
+  #right 
+  {
+  margin-left: auto;
+  }
+
+header ul a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.stylea
+{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a:hover
+{
+    opacity: 30%;
+}
+
+a:visited
+{
+    color:#000;
+}
+
+.projects
+{
+    font-family: "NHaasGroteskDSP-roman"; 
+    text-decoration: none;
+    font-size: 2rem;
+    color: #000;
+    margin: 0;
+}
+/*
+
+
+/* Hamburger Menu */
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background-color: black;
+    height: 4px;
+    width: 30px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a
+{
+    cursor: url('../Images/cursorH.png'), auto;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+    cursor: url('../Images/cursorH.png'), auto;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 20px 0; /* Increase vertical space between links in mobile mode */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 12px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -12px);
+    }
+}
+/* --------------------------------- */
+
+/* flex for projects page */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5% 10%;
+    gap: 20px; /* Add spacing between cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.project-card {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure content stays within the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 300px; /* Fixed width for consistency */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color for flexibility */
+    display: block; /* Ensures the whole card is clickable */
+    padding: 15px;
+}
+
+.project-image {
+    width: 80%; /* Full width of the card */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Crop the image to fit nicely */
+    border-bottom: 1px solid #ddd;
+    display: block; /* Makes the image block-level */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    color: #333; /* Dark gray text */
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666; /* Medium gray for the text */
+    line-height: 1.4;
+}
+/* --------------------------------- */
+.github-link {
+    margin-left: 2%;
+    padding-top: 1%;
+    display: inline-block;
+    font-size: 30px; /* Adjust the size of the icon */
+    color: #333; /* GitHub icon color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.github-link:hover {
+    color: #000; /* Darker color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+/* profile picture flexbox and bio */
+
+.fBox 
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10%; */
+}
+
+.sg
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10%; */
+}
+
+.fBox > * 
+{
+    flex: 1 1 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fBox-image 
+{
+    flex: 1 1 40%;
+    /* Remove the margin-left */
+    /* margin-left: 20%; */
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+}
+
+.fBox-image img 
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fBox-text 
+{
+    flex: 1 1 10em;
+    padding: 0 1rem;
+    order: 2;
+    width: 100%;
+    flex-grow: 11;
+    /* justify-content: center; Remove this line */
+    margin-right: 15%;
+}
+
+@media screen and (max-width: 1000px) 
+{
+    h1
+    {
+    font-family: "NHaasGroteskDSP-medium"; 
+    font-size: 3.1rem;
+    color: #000;
+    }
+
+    h2
+    {
+    font-family: "NHaasGroteskDSP-elight"; 
+    padding-top: 3%;
+    font-size: 1.25rem;
+    color: #000;
+    }
+
+    .fBox 
+    {
+        flex-wrap: wrap;    
+        justify-content: center;
+    }
+
+    .fBox-text 
+    {
+        flex: 0 0 100%;  
+        display: flex;
+        align-items: center; /* Align text to the bottom of the container */
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    .fBox-image 
+    {
+        flex: 1 1 100%; /* Image should take full width */
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Center the image vertically */
+    }
+
+    .fBox-image img 
+    {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px; /* Add space between icons */
+    margin-top: 2rem; /* Add some space above the icons */
+}
+
+.social-icons a img {
+    width: 40px;  /* Adjust the size of the icons */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect for icons */
+.social-icons a img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    opacity: 0.8;
+}
+
+/* --------------------------------- */
+
+/* triangles */
+
+
+.triangle-1
+{
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    background-size: contain;
+    opacity: 90%;
+}
+
+.triangle-2
+{
+    position: fixed;
+    top: 0vh;
+    right: 10vw;
+    background-size: contain;
+    opacity: 90%;
+}
+
+.triangle-3
+{
+    position: fixed;
+    bottom: 0vh;
+    left: 20vw;
+    background-size: contain;
+    opacity: 90%;
+}
+
+.triangle-4
+{
+    position: fixed;
+    bottom: 0vh;
+    right: 6vw;
+    background-size: contain;
+    opacity: 90%;
+}
+
+
+
+/* --------------------------------- */
+
+
+.stylebox 
+{
+    display: flex; /* Use flexbox to center vertically */
+    align-items: center; /* Center vertically */
+    padding-bottom: 1%;
+    justify-content: center;
+
+}
+
+.stylebox-item-heading
+{
+    text-align: center;
+}
+
+/* --------------------------------- */
+/* wave */
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .wave {
+    position: fixed;
+    width: 3000px; /* Ensure the wave is wide enough */
+    height: 198px;
+    top: 500px; /* Align both waves vertically */
+    left: 0;
+    transform: translate(0, 0); /* No initial transform */
+    animation: wave 15s linear infinite; /* Use linear for constant speed */
+}
+
+.wave:nth-of-type(2) {
+    transform: translate(-200, 0px); /* No initial transform */
+    animation: wave 20s linear infinite, swell 10s linear infinite; /* Combine horizontal and vertical animations */
+    opacity: 0.6; /* Slight transparency for depth effect */
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }        /* Start at 0 */
+    50% { transform: translateX(-1500px); } /* Move to -1600px */
+    100% { transform: translateX(0); }      /* Return to 0 */
+}
+
+@keyframes swell {
+    0%, 100% { transform: translateY(-30px) translateX(-1500px); } /* Smooth vertical movement */
+    50% { transform: translateY(10px); }
+}
+
+
+/* --------------------------------- */
+
+
+

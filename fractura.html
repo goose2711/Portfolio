@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/devPage.css">  
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/Logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1Yqgmx5dvYUkcDAHhKIVfWd5heq30ahB4/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    
+            
+                <br></br>
+
+                <main>
+                    <h1 class="designHeader">Process Analysis</h1>
+                    <h2 class="designSubHeader">"Fractura" Android app</h2>
+                    <a href="https://github.com/goose2711/BoneFractureDetection" target="_blank" class="github-link" aria-label="GitHub Repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <br></br>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image">
+                            <img class="dfPic" src="./Images/f1.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                                This project is a upper extremity fracture detecting, machine learning Android Application. The primary challenge addressed by the app is the automatic detection of body part in the upper extremity region and the identification of their fractures from radiographic images (X-rays). This problem is significant in medical diagnostics as it aids in quick preliminary assessments, potentially speeding up the treatment process and assisting radiologists in managing their workload more effectively
+                        </div>
+                    </div>
+
+                    <div class="rfBox-cont2">
+                        <div class="rfBox-image4">
+                            <img class="dfPic" src="./Images/f2.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                                In this project, I utilized CNNs (Convolutional Neural Networks), specifically the ResNet50 architecture, for image classification tasks related to upper extremity fractures. ResNet50, a 50-layer deep network with residual connections, addresses the vanishing gradient issue, making it ideal for this application. Four models were trained: ResNet50Bodyparts (97% accuracy, 12 epochs), which identifies the body part (hand, arm, or shoulder), and ResNet50ElbowFrac, ResNet50HandFrac, and ResNet50ShoulderFrac, each detecting fractures for their respective body parts. I trained these models in Python using TensorFlow and Keras, exported the weights in .h5 format, and converted them to .tflite using Google Colab for integration into the Android environment. After setting up the app's UI in XML, database in MySQLite, and backend in Java, I imported the models into Android Studio and handled compatibility issues, such as converting float64 data to float32 for proper execution.   
+                        </div>
+                    </div>
+
+                    <div class="rfBox-cont">
+                        <div class="rfBox-image3">
+                            <img class="dfPic" src="./Images/f3.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                            The app uses X-ray images selected by users from their gallery. Images are preprocessed by converting them to bitmaps, resizing them to 224x224 pixels, and normalizing the data before feature extraction via TensorBuffer. The Bodyparts model first identifies the body part, and based on the result, the appropriate fracture detection model processes the image. Preprocessing adjustments, like correcting hierarchy logic and precision mismatches, were critical to achieving accurate results after initial issues led to incorrect classifications. The app relies on the MURA dataset from Stanford AIMI, focusing on 20,335 images across three body parts, with a 72-18-10 training-validation-test split. This pipeline ensures consistent performance, provided input images are grayscale X-rays without extraneous elements.                    </div>
+                        </div>
+                    </div>
+
+                </main>
+    
+</body>
+</html>

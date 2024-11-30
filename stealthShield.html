@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/devPage.css">  
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/Logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1Yqgmx5dvYUkcDAHhKIVfWd5heq30ahB4/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script> 
+
+            
+                <br></br>
+
+                <main>
+                    <h1 class="designHeader">Process Analysis</h1>
+                    <h2 class="designSubHeader">"Stealth Shield" Real time weapons detecting Python App</h2>
+                    <a href="https://github.com/goose2711/Stealth-Shield-Weapons-Detection-System-" target="_blank" class="github-link" aria-label="GitHub Repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <br></br>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image">
+                            <img class="dfPic" src="./Images/ss.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                                Stealth Shield is a concealed AI-powered weapons detection system developed using python to enhance security while maintaining discretion. Inspired by the need for seamless surveillance solutions, the system integrates an AI camera, camouflaged within an ordinary backyard decor, to detect and respond to potential threats, specifically knives and guns. Utilizing the YOLOv7 object detection model pre-trained on the COCO dataset, the system ensures accurate and real-time monitoring with audible and visual alerts upon threat detection. Its compact design, strategic placement, and user-friendly interface offer a robust, inconspicuous security solution for safeguarding premises without drawing attention. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rfBox-cont2">
+                        <div class="rfBox-image4">
+                            <img class="dfPic" src="./Images/ss2.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                                The Python component of the application drives the AI-based weapon detection system, leveraging the YOLOv7 object detection model for real-time analysis. Utilizing OpenCV for image processing and capturing video feed from the hidden camera, the Python script continuously scans for knives or other threats. Upon detection, it triggers alerts through an integrated GPIO-based interface to activate visual and audible signals. The application also manages system logs and integrates with external APIs to send notifications, providing a seamless, automated security solution.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    
+
+                </main>
+    
+</body>
+</html>

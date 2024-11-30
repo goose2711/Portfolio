@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/devPage.css">  
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/Logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1Yqgmx5dvYUkcDAHhKIVfWd5heq30ahB4/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+            
+                <br></br>
+
+                <main>
+                    <h1 class="designHeader">Process Analysis</h1>
+                    <h2 class="designSubHeader">"Draft Drive" Backend Website</h2>
+                    <a href="https://github.com/goose2711/Draft-Drive" target="_blank" class="github-link" aria-label="GitHub Repository">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <br></br>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image">
+                            <img class="dfPic" src="./Images/dd1.png" alt="Bad image">
+                        </div>
+                        <div class="rfBox-text">
+                            <p class="bio">
+                                The Draft Drive platform is a web-based application made with PHP, CSS3, JavaScript and MySQL designed to immerse basketball enthusiasts in the world of the National Basketball Association (NBA). The site provides a rich user experience by offering a plethora of features such as player comparisons, team insights, personalized dream teams, and real-time data interaction. Below is a flowchart of the database design. </div>
+                    </div>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image2">
+                            <img class="dfPic" src="./Images/dd2.png" alt="Image 1">
+                        </div>
+                    </div>
+
+                    <div class="rfBox-text3">
+                        <p class="bio">
+                          I designed a robust relational database using MySQL to support the complex interactions within the Draft Drive platform. The database consists of interconnected tables for Users, Teams, Players, and Dream Teams, structured to maintain data integrity and efficiency. It utilizes foreign key relationships, such as linking team data to players and dream teams to users, ensuring seamless data retrieval. This structure allows users to create and save dream teams, add ratings and comments, and explore comprehensive player statistics and team details dynamically. The database design also facilitates easy updates and scalability to accommodate additional features and future growth.                        
+                        </p>
+                    </div>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image2">
+                            <img class="dfPic" src="./Images/dd3.png" alt="Image 1">
+                        </div>
+                    </div>
+
+                    <div class="rfBox-text3">
+                        <p class="bio">
+                            I then implemented an engaging and responsive front-end using HTML, CSS, and JavaScript, ensuring compatibility across a wide range of devices and screen sizes. The user interface features intuitive design elements like dropdowns, cards, and scrollable containers for browsing teams and players. On the back-end, I used PHP to handle core functionality, such as user authentication, secure session management, and dynamic database queries. AJAX functionality was integrated to enable real-time data updates without reloading pages, providing a smooth and interactive user experience, especially for features like player comparisons and team selections.
+                        </p>
+                    </div>
+
+                    <div class="rfBox">
+                        <div class="rfBox-image2">
+                            <img class="dfPic" src="./Images/dd4.png" alt="Image 1">
+                        </div>
+                    </div>
+
+                </main>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/fonts.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/Logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1Yqgmx5dvYUkcDAHhKIVfWd5heq30ahB4/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+    
+        <br></br>
+        <br></br>
+        <br></br>
+
+    
+        <main>
+    
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <a href="dev.html" class="project-link">
+                        <img src="./Images/appLogo.png" alt="Development Project" class="project-image">
+                        <h3>RunItUp</h3>
+                        <p>A fitness tracking Android Application.</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="design.html" class="project-link">
+                        <img src="./Images/dldk.jpg" alt="Design Project" class="project-image">
+                        <h3>DLDK Ux Design</h3>
+                        <p>A mobile app design for a popular concert.</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="fractura.html" class="project-link">
+                        <img src="./Images/f1.png" alt="Other Project" class="project-image">
+                        <h3>Fractura</h3>
+                        <p>A fracture detecting Android Application.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-container">
+                <div class="project-card">
+                    <a href="draftDrive.html" class="project-link">
+                        <img src="./Images/dd1.png" alt="Development Project" class="project-image">
+                        <h3>Draft Drive</h3>
+                        <p>An NBA Dreamteam Backend Website.</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="stealthShield.html" class="project-link">
+                        <img src="./Images/ss.png" alt="Design Project" class="project-image">
+                        <h3>Stealth Shield</h3>
+                        <p>Real time Weapons Detecting Python App.</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://observablehq.com/d/66cdd67f835c3387" class="project-link">
+                        <img src="./Images/hh.png" alt="Other Project" class="project-image">
+                        <h3>Data Visualisation</h3>
+                        <p>Homelessness Data Vis in Vancouver.</p>
+                    </a>
+                </div>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agastya Oruganti Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/fonts.css"/>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./Images/Logo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="https://drive.google.com/file/d/1Yqgmx5dvYUkcDAHhKIVfWd5heq30ahB4/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+    <div class="ocean">
+        <img class="wave" src="Images/wave.png" repeat-x></img>
+        <img class="wave wave2" src="Images/wave.png" ></img>
+    </div>
+    <br></br>
+
+    <main>
+        <br></br>
+            <div class="Mainbox">
+                <div class="Mainbox-item-heading">
+                    <h1>Hey! I am Agastya ✏️</h1>
+                    <h2> Web Developer | Android Engineer | UI/UX Designer</h2>
+                    <div class="social-icons">
+                        <a href="https://github.com/goose2711?tab=repositories" target="_blank">
+                            <img src="./Images/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.youtube.com/@agastyaoruganti2671" target="_blank">
+                            <img src="./Images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.linkedin.com/in/agastya-oruganti-b71b88316/" target="_blank">
+                            <img src="./Images/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="fBox">
+                    <div class="fBox-image">
+                        <img class="profilePic" src="./Images/profilePic.png" alt="Bad image">
+                    </div>
+                    <div class="fBox-text">
+                        <p class="bio">
+                            As a recent BSc graduate from SFU SIAT, I'm immersed in the world of Interactive Systems. My coding skills flow seamlessly through Java, JavaScript, Python, 
+                            HTML, CSS, XML, SQLite, and Android Studio. Beyond the code, I bring digital spaces to life with my creative prowess in graphic design and visual communication. 
+                            The entire Adobe Suite and Figma are my playgrounds, where I craft exceptional digital experiences. I also Golf 🏌🏻‍♂️, Surf 🏄🏻‍♂️, Snowboard 🏂, play Basketball 🏀 & Dj 💿
+                            <br></br>
+                            Email: aoruganti27@gmail.com
+                        </p>
+                    </div>
+                </div>
+
+
+    <br></br>
+    <br></br>
+
+    <br></br>
+    <br></br>
+
+    <br></br>
+    <br></br>
+    </main>
+</body>
+</html>
